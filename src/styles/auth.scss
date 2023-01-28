@@ -1,0 +1,18 @@
+html, body {margin: 0; height: 100%; overflow: hidden}
+
+.bg-all{
+    overflow: hidden;
+    background-image: url('../../public/Background.svg');
+    height: 100vh;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginForm{
+    justify-content: center;
+    height: 500px;
+    width: 400px;
+    background-color: red;
+}
