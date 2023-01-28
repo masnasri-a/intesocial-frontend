@@ -1,5 +1,7 @@
 html, body {margin: 0; height: 100%; overflow: hidden}
 
+$soft-gray:#D9D9D9;
+$primary:#3A3B7B;
 .bg-all{
     overflow: hidden;
     background-image: url('../../public/Background.svg');
@@ -11,8 +13,41 @@ html, body {margin: 0; height: 100%; overflow: hidden}
 }
 
 .loginForm{
+    display: flex;
+    flex-wrap: wrap;
+    // align-items: center;
     justify-content: center;
-    height: 500px;
+    height: max-content;
     width: 400px;
     background-color: red;
+    
+    p{
+        text-align: center;
+        width: 400px;
+        background-color: white;
+        font-size: 24px;
+        font-weight: 700;
+    }
+
+}
+
+.inputAuth{
+    width: 330px;
+    height: 40px;
+    margin-bottom: 12px;
+    padding-left: 20px;
+    font-size: 18px;
+    border: 1px solid $soft-gray;
+    border-radius: 5px;
+}
+
+.buttonAuth{
+    width: 352px;
+    height: 40px;
+    border-radius: 5px;
+    border: 0px;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: $primary;
 }
