@@ -1,53 +1,270 @@
-html, body {margin: 0; height: 100%; overflow: hidden}
+html,
+body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+}
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
 
-$soft-gray:#D9D9D9;
-$primary:#3A3B7B;
-.bg-all{
-    overflow: hidden;
-    background-image: url('../../public/Background.svg');
-    height: 100vh;
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+$poppins: "Poppins", sans-serif;
+$inter: "Inter", sans-serif;
+$soft-gray: #d9d9d9;
+$primary: #3a3b7b;
+.bg-all {
+  overflow: hidden;
+  background-image: url("../../public/Background.svg");
+  height: 100vh;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.loginForm{
-    display: flex;
-    flex-wrap: wrap;
-    // align-items: center;
-    justify-content: center;
-    height: max-content;
-    width: 400px;
-    background-color: red;
-    
-    p{
-        text-align: center;
-        width: 400px;
-        background-color: white;
-        font-size: 24px;
-        font-weight: 700;
+.loginForm {
+  display: flex;
+  flex-wrap: wrap;
+  // align-items: center;
+  justify-content: center;
+  height: max-content;
+  width: 400px;
+
+  span {
+    margin-top: 10px;
+    text-align: end;
+    width: 90%;
+    font-family: $poppins;
+    font-size: 14px;
+    a {
+      text-decoration: none;
+      font-weight: 600;
     }
+  }
 
+  p {
+    text-align: center;
+    width: 400px;
+    background-color: white;
+    font-size: 24px;
+    font-weight: 700;
+    font-family: $inter;
+  }
 }
 
-.inputAuth{
-    width: 330px;
-    height: 40px;
-    margin-bottom: 12px;
+.wrapper {
+  position: relative;
+
+  .hide {
+    cursor: pointer;
+    height: 1.5rem;
+    width: 1.5rem;
+    padding: 4px;
+    position: absolute;
+    box-sizing: border-box;
+    top: 40%;
+    right: 10px;
+    transform: translateY(-50%);
+  }
+}
+
+.inputAuth {
+  width: 330px;
+  height: 40px;
+  margin-bottom: 12px;
+  padding-left: 20px;
+  font-size: 18px;
+  border: 1px solid $soft-gray;
+  border-radius: 5px;
+}
+
+.buttonAuth {
+  cursor: pointer;
+  width: 352px;
+  height: 40px;
+  border-radius: 5px;
+  border: 0px;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  background-color: $primary;
+}
+
+.SidebarHome {
+  background-color: white;
+  width: 300px;
+  height: 100vh;
+  font-family: $poppins;
+  color: #3a3b7b;
+  cursor: pointer;
+  // background-color: #3a3b7b27;
+  .menusactive {
+    background-color: #eeeefe;
+    height: 50px;
+    display: flex;
+    align-items: center;
     padding-left: 20px;
-    font-size: 18px;
-    border: 1px solid $soft-gray;
-    border-radius: 5px;
+    border-right: 3px solid #3a3b7b;
+    transition: 1s;
+
+    span {
+      padding-left: 10px;
+    }
+  }
+  .menus {
+    height: 50px;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    transition: 1s;
+
+    span {
+      padding-left: 10px;
+    }
+  }
+  .logo {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    // background-color: aqua;
+  }
 }
 
-.buttonAuth{
-    width: 352px;
-    height: 40px;
-    border-radius: 5px;
-    border: 0px;
-    color: white;
-    font-size: 18px;
+.bg-soft {
+  width: 100vw;
+  height: 100vh;
+  background-color: #f9faff;
+  display: flex;
+}
+
+.headers {
+  width: calc(100vw - 300px);
+  height: 80px;
+  padding-left: 20px;
+  padding-right: 40px;
+  background-color: white;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  span {
+    transition: 1s;
     font-weight: 600;
-    background-color: $primary;
+    font-size: 20px;
+    font-family: $poppins;
+  }
+}
+
+.headerImage {
+  border-radius: 50%;
+}
+.dashboard {
+  display: flex;
+  overflow: auto;
+  max-height: calc(100vh - 100px);
+  padding-left: 20px;
+  font-family: $poppins;
+  .left {
+    width: 60%;
+  }
+  .right{
+    margin-left: 2%;
+    width: 36%;
+    .accountProfile{
+      padding:50px;
+      background-color: white;
+      border-radius: 10px;
+      height: 420px;
+      .gender{
+        margin-top: 30px;
+        display: flex;
+        justify-content: space-between;
+        padding-left: 30%;
+        padding-right: 30%;
+        .male{
+          text-align: center;
+          p{
+            font-weight: 600;
+          }
+        }
+        .female{
+          text-align: center;
+          p{
+            font-weight: 600;
+          }
+        }
+        .colmale{
+          margin-right: 10px;
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          background-color: rgb(255, 99, 132);
+        }
+        .colfemale{
+          margin-right: 10px;
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          background-color:rgba(75, 192, 192);
+        }
+      }
+    }
+  }
+  .title {
+    font-size: 30px;
+    font-weight: 600;
+  }
+  .overview {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+.total {
+  display: flex;
+  background-color: white;
+  width: 32%;
+  height: 80px;
+  border-radius: 10px;
+
+  .top {
+    width: 100%;
+    display: flex;
+    padding-top: 10px;
+    padding-right: 10px;
+    justify-content: space-between;
+    height: max-content;
+    color: #2754a5;
+    span {
+      font-weight: 700;
+      font-size: 18px;
+    }
+  }
+  p {
+    padding-left: 10px;
+    font-size: 16px;
+    height: max-content;
+    font-weight: 600;
+  }
+  .side {
+    width: 10px;
+    height: 60px;
+    background: #2754a5;
+    border-radius: 0px 0px 10px 0px;
+  }
+}
+
+.userReport {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px 20px 20px 20px;
+}
+
+
+.dflex{
+  display: flex;
+}
+.jcc{
+  justify-content: center;
+}
+
+.aic{
+  align-items: center;
 }

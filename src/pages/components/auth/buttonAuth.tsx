@@ -1,9 +1,15 @@
-import React from 'react'
+import React from "react";
 
-const ButtonAuth = (props:any) => {
+const ButtonAuth = (props: any) => {
   return (
-    <button className='buttonAuth' >{props.text}</button>
-  )
-}
+    <button
+      type="submit"
+      className="buttonAuth"
+      onClick={(e) => props.onClick()}
+    >
+      {props.text}
+    </button>
+  );
+};
 
-export default ButtonAuth
+export default ButtonAuth;
